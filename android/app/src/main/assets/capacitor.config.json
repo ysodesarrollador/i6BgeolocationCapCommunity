@@ -1,0 +1,6 @@
+{
+	"appId": "com.ionicaapptest.yso",
+	"appName": "AppTest",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

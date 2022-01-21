@@ -1,0 +1,106 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <div class="divToolbar">
+      <ion-title>
+        BG CapComm.
+      </ion-title>
+  
+      <ion-fab-button (click)="toogleMyLocation()" expand="block" fill="solid" shape="round"
+      *ngIf="activateWatch" color="primary">
+        <ion-icon color="light"  name="locate"></ion-icon>
+      </ion-fab-button>
+    
+      <ion-fab-button (click)="toogleMyLocation()" expand="block" fill="solid" shape="round"
+      *ngIf="!activateWatch" color="danger">
+        <ion-icon color="light"  name="locate"></ion-icon>
+      </ion-fab-button>
+    </div>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding"
+color="success">
+
+
+  <!-- Bg -->
+   <ion-row>
+     <ion-col size="12">
+      <ion-label style="font-weight: bold;"> Bacground Geolocation: </ion-label>
+     </ion-col>
+   </ion-row>
+    
+  <ion-row class="ion-justify-content-between">  
+   
+    <ion-button color="secondary" (click)="add_watcher1(true)"
+    style="text-transform: none;"
+    [disabled]="starbg">START</ion-button>
+
+<!--     <ion-button color="danger" (click)="stop()"
+    style="text-transform: none;"
+    [disabled]="!starbg">STOP</ion-button> -->
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <div style="overflow-y: scroll;">
+        <ion-list *ngIf="locations.length > 0">
+          <ion-item *ngFor = "let loc of locations let i = index">
+            {{i + 1}})
+            <ion-label style="margin-left: 6px;">
+              {{loc.latitude}}</ion-label>
+            <ion-label>{{loc.longitude}}</ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+
+    </ion-col>
+  </ion-row>
+  
+
+
+</ion-content>
+<ion-footer class="ion-no-border">
+
+  <ion-toolbar>
+   <ion-row class="ion-justify-content-around">
+    <ion-label>{{newlat}}</ion-label>   <ion-label>{{newlng}}</ion-label>
+   </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ul id="watchers"></ul>
+
+  <ion-button (click)="add_watcher(false)">+FG</ion-button>
+  <ion-button (click)="add_watcher(true)">+BG</ion-button>
+  Guess:
+  <ion-button (click)="guess(50)">50ms</ion-button>
+  <ion-button (click)="guess(100)">100ms</ion-button>
+  <ion-button (click)="guess(250)">250ms</ion-button>
+  <ion-button (click)="guess(1000)">1000ms</ion-button>
+
+  <ul id="log">
+    <li>Init</li>
+  </ul>
+  <div id="container">
+    <ion-row class="ion-justify-content-center">     
+        <ion-button (click)="log_for_watcher('Listo')" 
+        style="width: 150px;" expand="block" fill="solid" shape="round">
+          Start
+        </ion-button>
+    </ion-row>
+  </div>
+</ion-content>
+ -->
+
+ 
