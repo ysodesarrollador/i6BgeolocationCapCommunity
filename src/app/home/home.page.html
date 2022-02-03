@@ -2,7 +2,7 @@
   <ion-toolbar>
     <div class="divToolbar">
       <ion-title>
-        BG CapComm.
+        BG Capacitor.
       </ion-title>
   
       <ion-fab-button (click)="toogleMyLocation()" expand="block" fill="solid" shape="round"
@@ -20,7 +20,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding"
-color="success">
+color="medium">
 
 
   <!-- Bg -->
@@ -32,13 +32,13 @@ color="success">
     
   <ion-row class="ion-justify-content-between">  
    
-    <ion-button color="secondary" (click)="add_watcher1(true)"
+    <ion-button color="secondary" (click)="start()"
     style="text-transform: none;"
     [disabled]="starbg">START</ion-button>
 
-<!--     <ion-button color="danger" (click)="stop()"
+    <ion-button color="danger" (click)="stop()"
     style="text-transform: none;"
-    [disabled]="!starbg">STOP</ion-button> -->
+    [disabled]="!starbg">STOP</ion-button>
   </ion-row>
 
   <ion-row>
